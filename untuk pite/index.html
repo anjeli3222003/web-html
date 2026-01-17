@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise untuk Sayangku 💖</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef, #fecfef);
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+        input {
+            padding: 10px;
+            font-size: 1.2em;
+            border: 2px solid #ff6b9d;
+            border-radius: 5px;
+            width: 200px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background: #ff6b9d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #ff4a7a;
+        }
+        .message {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+        .clue {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .heart {
+            font-size: 3em;
+            color: #ff6b9d;
+            margin: 20px 0;
+        }
+        .closing {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Sayangku! 💕🎂</h1>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <p>Aku punya surprise spesial buat kamu. Masukkan kode rahasia untuk membuka pesan cinta dariku. Clue-nya ada di bawah ini, nebak aja ya! 😘</p>
+        
+        <div class="clue">Clue untuk pesan pertama: Tanggal pertama kita saling kenal.</div>
+        <input type="text" id="codeInput" placeholder="Masukkan kode...">
+        <button onclick="checkCode()">Buka Pesan</button>
+        
+        <div id="message1" class="message">
+            <p>Titip salam ya ke sayangkuu yang hidup di 30 tahun yang akan datang kasih tau ke dia,<br>
+            Sayangggg (ILHAM) 😘😘<br>
+            Aku mau mulai sekarang sayangg jaga kesehatan<br>
+            Stop in ngerokonyaaaaa...</p>
+        </div>
+        
+        <div class="clue">Clue untuk pesan kedua: Tanggal jadian kita.</div>
+        <div id="message2" class="message">
+            <p>Happy Birthday sayangkuuu cintakuuu💞 🤍🎉🎊<br>
+            Semoga dengan bertambahnya umur 😍, kamu bisa menjadi pribadi yang lebih baik lagi, sehat selalu mental dan fisiknya, dilancarkan rezekinya, dipermudah segala urusannya, semoga tujuan kita berdua cepat tercapai aamiin dan terima kasih telah memberiku cinta yang belum pernah aku temui sebelumnyaa, tetap menjadi laki laki yang tidak pernah berubah dari awal hingga akhir yaaa 🤍 semangat dalam berprosesnyaa gantengggkuuu, ingat menyerah bukanlah solusi ketika kamu merasa lelah, tetap menjadi orang baik yaa meskipun orng belum tentu memandang kita baik, aku tetap disini mendo'akan dan selalu support usaha kamu, ingat selalu kata kata aku yaa jangan melakukan hal aneh meskipun aku jauh dan tidak mengetahui itu, sekali lagiiii Selamat ulang tahun sayangkuuu 🤍🤍🎊❤️</p>
+        </div>
+        
+        <div class="closing">
+            <p>Dan akhirnya, sayangku yang tercinta, aku ingin mengatakan bahwa setiap detik bersamamu adalah anugerah terindah dalam hidupku. Kamu adalah cahaya yang menerangi hari-hariku, cinta yang membuatku tersenyum setiap pagi, dan harapan yang membuatku percaya pada masa depan yang indah. Terima kasih telah menjadi bagian dari hidupku, aku mencintaimu lebih dari kata-kata bisa ungkapkan. Selamat ulang tahun, semoga tahun ini penuh kebahagiaan, kesehatan, dan cinta yang tak terbatas. Aku selalu di sini untukmu, sekarang dan selamanya. 💖😘</p>
+        </div>
+    </div>
+
+    <script>
+        function checkCode() {
+            const code = document.getElementById('codeInput').value;
+            const message1 = document.getElementById('message1');
+            const message2 = document.getElementById('message2');
+            
+            if (code === '0406') {
+                message1.style.display = 'block';
+                message2.style.display = 'none';
+                alert('Pesan pertama terbuka! 💕');
+            } else if (code === '2407') {
+                message2.style.display = 'block';
+                message1.style.display = 'none';
+                alert('Pesan kedua terbuka! 🎉');
+            } else {
+                alert('Kode salah, coba lagi ya sayang! 😊');
+                message1.style.display = 'none';
+                message2.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
